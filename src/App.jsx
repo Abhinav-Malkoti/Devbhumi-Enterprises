@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import logoUrl from '/logo.png';
 
 // --- UTILS ---
 function cn(...inputs) {
@@ -23,6 +24,7 @@ function cn(...inputs) {
 }
 
 gsap.registerPlugin(ScrollTrigger);
+
 
 // --- COMPONENTS ---
 
@@ -51,7 +53,7 @@ const Navbar = () => {
     >
       <div className="h-16 flex items-center">
         <img 
-          src="/logo.png" 
+          src={logoUrl} 
           alt="Devbhumi Enterprises" 
           className="h-full w-auto transition-transform duration-500 hover:scale-105 origin-left"
         />
@@ -151,7 +153,7 @@ const Features = () => {
           </div>
           <div className="hidden md:flex justify-end opacity-90 relative pr-8">
             <img 
-              src="/logo.png" 
+              src={logoUrl} 
               alt="Devbhumi Enterprises" 
               className="h-32 md:h-56 w-auto mix-blend-multiply drop-shadow-sm object-contain" 
             />
