@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  body {
+    @apply font-sans selection:bg-accent selection:text-white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-8 py-4 rounded-full font-medium transition-all duration-500 relative overflow-hidden flex items-center justify-center gap-2;
+  }
+
+  .btn-primary {
+    @apply bg-dark text-white hover:scale-[1.03];
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white hover:scale-[1.03];
+  }
+
+  .btn-outline {
+    @apply border border-dark/20 text-dark hover:bg-dark/5 hover:scale-[1.03];
+  }
+
+  .pill-container {
+    @apply rounded-5xl border border-dark/10 bg-white/40 backdrop-blur-2xl;
+  }
+
+  .card-premium {
+    @apply bg-white border border-dark/5 rounded-4xl p-8 shadow-sm transition-all duration-500 hover:shadow-xl hover:border-accent/10;
+  }
+}
+
+/* Custom easing for magnetic feel */
+.magnetic {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.magnetic:hover {
+  transform: translateY(-1px) scale(1.03);
+}
+
+/* Stacking Archive Utility */
+.archive-stack {
+  @apply sticky top-24 h-[80vh] w-full;
+}
